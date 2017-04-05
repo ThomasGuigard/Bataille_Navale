@@ -16,7 +16,7 @@ namespace Bataille_Navale_Test
             //CollectionAssert.AreEqual(gr.checkParams(5,6,1920,1080),array);
 
         }
-
+        
         [TestMethod]
         public void accessGrille2()
         {
