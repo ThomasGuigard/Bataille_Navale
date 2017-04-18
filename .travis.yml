@@ -1,2 +1,8 @@
 language: csharp
 solution: Bataille_Navale.sln
+install:
+  - nuget restore Bataille_Navale.sln
+  - nuget install NUnit.Runners -Version 2.6.4 -OutputDirectory testrunner
+script:
+  - xbuild /p:Configuration=Release Bataille_Navale.sln
+  - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe ./Bataille_Navale.Tests/bin/Release/Bataille_Navale.Tests.dll
